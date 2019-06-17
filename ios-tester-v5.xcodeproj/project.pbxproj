@@ -13,6 +13,8 @@
 		E253A04B22B3939200002053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E253A04A22B3939200002053 /* Assets.xcassets */; };
 		E253A04E22B3939200002053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E253A04C22B3939200002053 /* LaunchScreen.storyboard */; };
 		E253A05922B3939200002053 /* ios_tester_v5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253A05822B3939200002053 /* ios_tester_v5Tests.swift */; };
+		E253A06C22B3944A00002053 /* ios_sdk_v5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E253A06922B3943800002053 /* ios_sdk_v5.framework */; };
+		E253A06D22B3944A00002053 /* ios_sdk_v5.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E253A06922B3943800002053 /* ios_sdk_v5.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +25,42 @@
 			remoteGlobalIDString = E253A03F22B3939000002053;
 			remoteInfo = "ios-tester-v5";
 		};
+		E253A06822B3943800002053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E253A06322B3943800002053 /* ios-sdk-v5.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2BC1F5B22B1304900850904;
+			remoteInfo = "ios-sdk-v5";
+		};
+		E253A06A22B3943800002053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E253A06322B3943800002053 /* ios-sdk-v5.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2BC1F6422B1304900850904;
+			remoteInfo = "ios-sdk-v5Tests";
+		};
+		E253A06E22B3944A00002053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E253A06322B3943800002053 /* ios-sdk-v5.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E2BC1F5A22B1304900850904;
+			remoteInfo = "ios-sdk-v5";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E253A07022B3944B00002053 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E253A06D22B3944A00002053 /* ios_sdk_v5.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E253A04022B3939000002053 /* ios-tester-v5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-tester-v5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +73,7 @@
 		E253A05422B3939200002053 /* ios-tester-v5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-tester-v5Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E253A05822B3939200002053 /* ios_tester_v5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_tester_v5Tests.swift; sourceTree = "<group>"; };
 		E253A05A22B3939200002053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E253A06322B3943800002053 /* ios-sdk-v5.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ios-sdk-v5.xcodeproj"; path = "../../ios-sdk-v5/ios-sdk-v5.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E253A06C22B3944A00002053 /* ios_sdk_v5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +98,7 @@
 		E253A03722B3939000002053 = {
 			isa = PBXGroup;
 			children = (
+				E253A06322B3943800002053 /* ios-sdk-v5.xcodeproj */,
 				E253A04222B3939000002053 /* ios-tester-v5 */,
 				E253A05722B3939200002053 /* ios-tester-v5Tests */,
 				E253A04122B3939000002053 /* Products */,
@@ -96,6 +136,15 @@
 			path = "ios-tester-v5Tests";
 			sourceTree = "<group>";
 		};
+		E253A06422B3943800002053 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E253A06922B3943800002053 /* ios_sdk_v5.framework */,
+				E253A06B22B3943800002053 /* ios-sdk-v5Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,10 +155,12 @@
 				E253A03C22B3939000002053 /* Sources */,
 				E253A03D22B3939000002053 /* Frameworks */,
 				E253A03E22B3939000002053 /* Resources */,
+				E253A07022B3944B00002053 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E253A06F22B3944A00002053 /* PBXTargetDependency */,
 			);
 			name = "ios-tester-v5";
 			productName = "ios-tester-v5";
@@ -164,6 +215,12 @@
 			mainGroup = E253A03722B3939000002053;
 			productRefGroup = E253A04122B3939000002053 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E253A06422B3943800002053 /* Products */;
+					ProjectRef = E253A06322B3943800002053 /* ios-sdk-v5.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E253A03F22B3939000002053 /* ios-tester-v5 */,
@@ -171,6 +228,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E253A06922B3943800002053 /* ios_sdk_v5.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ios_sdk_v5.framework;
+			remoteRef = E253A06822B3943800002053 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E253A06B22B3943800002053 /* ios-sdk-v5Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ios-sdk-v5Tests.xctest";
+			remoteRef = E253A06A22B3943800002053 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E253A03E22B3939000002053 /* Resources */ = {
@@ -217,6 +291,11 @@
 			isa = PBXTargetDependency;
 			target = E253A03F22B3939000002053 /* ios-tester-v5 */;
 			targetProxy = E253A05522B3939200002053 /* PBXContainerItemProxy */;
+		};
+		E253A06F22B3944A00002053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ios-sdk-v5";
+			targetProxy = E253A06E22B3944A00002053 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -359,6 +438,7 @@
 		E253A05E22B3939200002053 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6CK67QAV2;
@@ -377,6 +457,7 @@
 		E253A05F22B3939200002053 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6CK67QAV2;
